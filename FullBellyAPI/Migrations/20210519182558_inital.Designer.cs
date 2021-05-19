@@ -3,14 +3,16 @@ using System;
 using FullBellyAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FullBellyAPI.Migrations
 {
     [DbContext(typeof(FullBellyAPIContext))]
-    partial class FullBellyAPIContextModelSnapshot : ModelSnapshot
+    [Migration("20210519182558_inital")]
+    partial class inital
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,9 +34,6 @@ namespace FullBellyAPI.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("Description")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
-
                     b.Property<string>("DonationName")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
@@ -49,9 +48,6 @@ namespace FullBellyAPI.Migrations
 
                     b.Property<double>("Lng")
                         .HasColumnType("double");
-
-                    b.Property<string>("Quantity")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("StartTime")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
@@ -72,68 +68,52 @@ namespace FullBellyAPI.Migrations
                             DonationId = 1,
                             Address = "8445 55th Ave S",
                             City = "Seattle",
-                            Date = new DateTime(2021, 5, 19, 23, 33, 26, 823, DateTimeKind.Utc).AddTicks(3950),
-                            Description = "We have left over csa boxes for anyone who wants them.",
-                            DonationName = "Veggies",
-                            Donor = "Seattle Tilth Alliance",
-                            EndTime = "16:00",
+                            Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DonationName = "cheese",
+                            Donor = "Jeroen",
                             Lat = 47.527229800000001,
                             Lng = -122.2640512,
-                            Quantity = "10",
-                            StartTime = "12:00",
                             State = "WA",
                             Zip = "98118"
                         },
                         new
                         {
                             DonationId = 2,
-                            Address = "500 Wall St",
+                            Address = "8445 55th Ave S",
                             City = "Seattle",
-                            Date = new DateTime(2021, 5, 19, 23, 33, 26, 823, DateTimeKind.Utc).AddTicks(7000),
-                            Description = "This is our mobile soup kitchen van. We will operate until the cops crash the party",
-                            DonationName = "Biscuits and Gravy",
-                            Donor = "Sacred Heart Seattle",
-                            EndTime = "20:00",
-                            Lat = 47.617812200000003,
-                            Lng = -122.3450959,
-                            Quantity = "200",
-                            StartTime = "9:00",
+                            Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DonationName = "waterloo",
+                            Donor = "Hannah",
+                            Lat = 47.527229800000001,
+                            Lng = -122.2640523,
                             State = "WA",
-                            Zip = "98121"
+                            Zip = "98118"
                         },
                         new
                         {
                             DonationId = 3,
-                            Address = "2201 E Madison St",
+                            Address = "8445 55th Ave S",
                             City = "Seattle",
-                            Date = new DateTime(2021, 5, 19, 23, 33, 26, 823, DateTimeKind.Utc).AddTicks(7000),
-                            Description = "We are offering a sit down meal to anyone who cannot afford one. First come first serve. Continuation is based on your kind cooperation",
-                            DonationName = "Chicken dinner",
-                            Donor = "A Real Restaurant",
-                            EndTime = "22:00",
-                            Lat = 47.6178326,
-                            Lng = -122.30336459999999,
-                            Quantity = "20",
-                            StartTime = "20:00",
+                            Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DonationName = "kibble",
+                            Donor = "Attila",
+                            Lat = 47.527229800000001,
+                            Lng = -122.26405870000001,
                             State = "WA",
-                            Zip = "98112"
+                            Zip = "98118"
                         },
                         new
                         {
                             DonationId = 4,
-                            Address = "2025 14th Ave S",
+                            Address = "8445 55th Ave S",
                             City = "Seattle",
-                            Date = new DateTime(2021, 5, 19, 23, 33, 26, 823, DateTimeKind.Utc).AddTicks(7000),
-                            Description = "Our students are organizing a free sandwich day.",
-                            DonationName = "Sandwiches",
-                            Donor = "Beacon Hill Elementary",
-                            EndTime = "16:00",
-                            Lat = 47.585071399999997,
-                            Lng = -122.31538860000001,
-                            Quantity = "100",
-                            StartTime = "14:00",
+                            Date = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DonationName = "eggs",
+                            Donor = "Koji",
+                            Lat = 47.527229800000001,
+                            Lng = -122.2640512,
                             State = "WA",
-                            Zip = "98144"
+                            Zip = "98118"
                         });
                 });
 #pragma warning restore 612, 618
