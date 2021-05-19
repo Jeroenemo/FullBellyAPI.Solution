@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FullBellyAPI.Migrations
 {
     [DbContext(typeof(FullBellyAPIContext))]
-    [Migration("20210517223557_seeddata")]
-    partial class seeddata
+    [Migration("20210518224429_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
